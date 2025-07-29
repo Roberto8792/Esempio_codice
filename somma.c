@@ -6,13 +6,13 @@ int main() {
     int secondo_numero;
     int somma;
 
-    printf("Inserisci il primo numero: ");
+    printf("\nInserisci il primo numero: ");
     scanf("%d", &primo_numero);
-    printf("Inserisci il secondo numero: ");
+    printf("\nInserisci il secondo numero: ");
     scanf("%d", &secondo_numero);
     
     somma = primo_numero + secondo_numero;
-    printf("La somma dei due numeri è: %d\n", somma);
+    printf("\nLa somma di %d + %d è = %d", primo_numero, secondo_numero, somma);
     return 0;
     
 }
