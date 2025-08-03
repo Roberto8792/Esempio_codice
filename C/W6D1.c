@@ -140,3 +140,4 @@ int partita() {
     }
         }
     return score;
+}
