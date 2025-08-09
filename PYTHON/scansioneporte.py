@@ -14,6 +14,7 @@ porte_chiuse = []
 for port in range(lowport, highport+1):
     #avviamo una connessione tcp ipv4
     s = so.socket(so.AF_INET, so.SOCK_STREAM)
+    s.settimeout(0.5) #timeout veloce
     #TESTIAMO IL 3WAy HANDSHAKE
     status = s.connect_ex((target,port))
 
@@ -24,7 +25,7 @@ for port in range(lowport, highport+1):
         porte_chiuse.append(port)
     s.close()
 
-    domanda = input("vuoi vedere le porte chiuse?")
-    if domanda.upper().startswith("S"):
+domanda = input("vuoi vedere le porte chiuse?")
+if domanda.upper().startswith("S"):
         #faccio il join di tutte le porte chiuse
         print("\nChiusa: ".join([str(n) for n in porte_chiuse]))
