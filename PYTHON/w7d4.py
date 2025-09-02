@@ -18,7 +18,7 @@ import random
 import time
 
 if len(sys.argv) != 3:
-    print("Usage: python esercizio.py <ip> <porta> <numero_pacchetti>")
+    print("Usage: python w7d4.py <ip> <porta> <numero_pacchetti>")
     sys.exit(254)
 
 ip = sys.argv[1]
